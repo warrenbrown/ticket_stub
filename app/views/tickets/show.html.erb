@@ -1,3 +1,4 @@
 <h1><%= @ticket.name %></h1>
 
 <%= link_to 'Edit', edit_ticket_path(@ticket) %>
+<%= link_to 'Delete', ticket_path(@ticket), method: :delete, data: { confirm: 'Are yo usuer yo want to delete this ticket?'} %>
