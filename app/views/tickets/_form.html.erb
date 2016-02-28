@@ -1,0 +1,8 @@
+<%= simple_form_for(@ticket) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :seat_id_seq,label: 'Seat number' %>
+  <%= f.input :address %>
+  <%= f.input :price_paid %>
+  <%= f.input :email_address %>
+  <%= f.submit %>
+<% end %>
