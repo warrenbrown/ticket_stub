@@ -17,10 +17,11 @@ RSpec.feature 'Users can create tickets' do
   end
   scenario 'with invalid attriutes' do
     fill_in 'Name', with: ''
-
+    fill_in 'Seat number', with:''
     click_button 'Create Ticket'
 
     expect(page).to have_content 'Ticket has not been created.'
     expect(page).to have_content "Name can't be blank"
+    expect(page).to have_content "Seat id seq can't be blank"
   end
 end

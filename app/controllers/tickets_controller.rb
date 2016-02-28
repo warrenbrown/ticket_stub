@@ -1,6 +1,7 @@
 class TicketsController < ApplicationController
 
   def index
+    @tickets = Ticket.all
   end
 
   def new
@@ -16,6 +17,10 @@ class TicketsController < ApplicationController
       flash.now[alert] = 'Ticket has not been created.'
       render 'new'
     end
+  end
+
+  def show
+    @ticket = Ticket.find(params[:id])
   end
 
   private
